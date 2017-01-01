@@ -11,11 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161207161540) do
+ActiveRecord::Schema.define(version: 20161127123752) do
 
   create_table "listings", force: :cascade do |t|
     t.string   "home_type"
     t.string   "pet_type"
+    t.string   "pet_size"
     t.integer  "breeding_years"
     t.string   "address"
     t.string   "listing_title"
@@ -25,7 +26,8 @@ ActiveRecord::Schema.define(version: 20161207161540) do
     t.integer  "user_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
-    t.string   "pet_size"
+    t.float    "latitude"
+    t.float    "longitude"
   end
 
   add_index "listings", ["user_id"], name: "index_listings_on_user_id"
@@ -60,6 +62,21 @@ ActiveRecord::Schema.define(version: 20161207161540) do
 
   add_index "photos", ["listing_id"], name: "index_photos_on_listing_id"
 
+  create_table "reservations", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "listing_id"
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.integer  "price_pernight"
+    t.integer  "total_price"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.boolean  "self_booking"
+  end
+
+  add_index "reservations", ["listing_id"], name: "index_reservations_on_listing_id"
+  add_index "reservations", ["user_id"], name: "index_reservations_on_user_id"
+
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -79,6 +96,15 @@ ActiveRecord::Schema.define(version: 20161207161540) do
     t.string   "name"
     t.string   "phone_number"
     t.string   "description"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.string   "publishable_key"
+    t.string   "secret_key"
+    t.string   "stripe_user_id"
+    t.string   "currency"
+    t.string   "stripe_account_type"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

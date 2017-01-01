@@ -3,6 +3,7 @@ class CreateListings < ActiveRecord::Migration
     create_table :listings do |t|
       t.string :home_type
       t.string :pet_type
+      t.string :pet_size
       t.integer :breeding_years
       t.string :address
       t.string :listing_title

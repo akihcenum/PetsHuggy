@@ -1,11 +1,9 @@
 source 'https://rubygems.org'
 
-
 gem 'rails', '4.2.6'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
-
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
@@ -15,29 +13,37 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'devise'
 gem 'toastr-rails'
 gem 'omniauth-facebook'
-gem "paperclip", "~> 5.0.0"
+gem "paperclip", "~> 5.0.0.beta1"
 gem 'dropzonejs-rails'
 gem "figaro", "~> 1.1.0"
-gem "aws-sdk", '~> 2.3'
+gem 'aws-sdk', '~> 2.3'
+gem 'geocoder'
+gem 'jquery-ui-rails'
+gem 'stripe'
 
 
-group :production do 
+
+
+group :production do
 	gem 'pg'
 	gem 'rails_12factor'
 end
 
-group :development, :test do 
+group :development, :test do
 	gem 'sqlite3'
 end
 
 
+
 group :development, :test do
-    gem 'byebug'
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'byebug'
 end
 
 group :development do
-    gem 'web-console', '~> 2.0'
+  # Access an IRB console on exception pages or by using <%= console %> in views
+  gem 'web-console', '~> 2.0'
 
-    gem 'spring'
+  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'spring'
 end
-
