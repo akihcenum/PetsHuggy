@@ -2,7 +2,7 @@ class StripeController < ApplicationController
   # Connect yourself to a Stripe account.
   # Only works on the currently logged in user.
   # See app/services/stripe_oauth.rb for #oauth_url details.
-    #要約するとどのurlにリダイレクトさせるかというアクションです。
+
   def oauth
     connector = StripeOauth.new( current_user )
     url, error = connector.oauth_url( redirect_uri: stripe_confirm_url )
@@ -17,7 +17,7 @@ class StripeController < ApplicationController
 
   # Confirm a connection to a Stripe account.
   # Only works on the currently logged in user.
-  # See app/services/stripe_connect.rb for #verify! details.
+  # See app/services/stripe_oauth.rb for #verify! details.
   def confirm
     connector = StripeOauth.new( current_user )
     if params[:code]
