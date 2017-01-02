@@ -3,7 +3,7 @@ class StripeOauth < Struct.new( :user )
   def oauth_url( params )
     url = client.authorize_url( {
       scope: 'read_write',
-      stripe_landing: 'login',
+      stripe_landing: 'register',
       stripe_user: {
         email: user.email
       }
@@ -14,6 +14,8 @@ class StripeOauth < Struct.new( :user )
     # can handle errors (other than access_denied, which
     # could come later).
     # See https://stripe.com/docs/connect/reference#get-authorize-errors
+    # 例外処理
+    # RestClientについて https://github.com/rest-client/rest-client
     begin
       response = RestClient.get url
       # If the request was successful, then we're all good to return
@@ -55,6 +57,7 @@ class StripeOauth < Struct.new( :user )
   # a 'code' that we can use to get the access token
   # and other details about our connected user.
   # See app/controllers/users_controller.rb#confirm for counterpart.
+  # 変更!See app/controllers/stripe_controller.rb#confirm for counterpart.
   def verify!( code )
     data = client.get_token( code, {
       headers: {
@@ -109,9 +112,10 @@ class StripeOauth < Struct.new( :user )
   # A simple OAuth2 client we can use to generate a URL
   # to redirect the user to as well as get an access token.
   # Used in #oauth_url and #verify!
+  # see this docs https://github.com/intridea/oauth2
   def client
     @client ||= OAuth2::Client.new(
-      Rails.configuration.stripe[:client_id],
+      ENV['STRIPE_CONNECT_CLIENT_ID'],
       Stripe.api_key,
       {
         site: 'https://connect.stripe.com',
