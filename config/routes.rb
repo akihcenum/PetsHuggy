@@ -1,4 +1,4 @@
-Rails.application.routes.draw do  
+Rails.application.routes.draw do
   resources :listings
 
   root :to => 'pages#index'
@@ -9,12 +9,12 @@ Rails.application.routes.draw do
 
   resources :photos, only: [:create, :destroy] do
     collection do
-      get :list 
+      get :list
     end
   end
 
-  resources :listings do 
-    resources :reservations, only: [:create]
+  resources :listings do
+    resources :reservations, only: [:new, :create]
   end
 
   get '/setdate' => 'reservations#setdate'
@@ -35,6 +35,5 @@ Rails.application.routes.draw do
   get '/connect/oauth' => 'stripe#oauth', as: 'stripe_oauth'
   get '/connect/confirm' => 'stripe#confirm', as: 'stripe_confirm'
   get '/connect/deauthorize' => 'stripe#deauthorize', as: 'stripe_deauthorize'
-  
-end
 
+end
