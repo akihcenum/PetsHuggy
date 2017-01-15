@@ -12,7 +12,7 @@
                 </div>
             </div>
 
-            <div class="panel-body">            
+            <div class="panel-body">
 
                 <%= form_for @listing do |f| %>
 
@@ -20,7 +20,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label>タイトル</label>
-                                <%= f.text_field :listing_title, placeholder: "リスティングタイトルを記載しましょう", class: "form-control" %>
+                                <%= f.text_field :listing_title, placeholder: "リスティングタイトルを記載しましょう", class: "form-control", required: "true" %>
                             </div>
                         </div>
                     </div>
@@ -29,11 +29,11 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label>内容</label>
-                                <%= f.text_area :listing_content, rows: 8, placeholder: "リスティングの内容について記述してください", class: "form-control" %>
-                            </div>                            
+                                <%= f.text_area :listing_content, rows: 8, placeholder: "リスティングの内容について記述してください", class: "form-control", required: "true" %>
+                            </div>
                         </div>
                     </div>
-            
+
 
                     <div class="actions">
                         <%= f.submit "更新", class: "btn btn-danger" %>
