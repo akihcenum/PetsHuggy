@@ -14,6 +14,7 @@
 //= require dropzone
 //= require bootstrap-sprockets
 //= require jquery-ui
+//= require private_pub
 //= require toastr
 //= require jquery_ujs
 //= require turbolinks

@@ -6,65 +6,66 @@
 @import "jquery-bootstrap-datepicker";
 
 .jumbotron {
-    padding-top: 0px;
-    // 背景画像を暗くする
-    background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.05) ), url(person-845325_1920.jpg);
+  padding-top: 0px;
+  // 背景画像を暗くする
+  background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.05) ), url(person-845325_1920.jpg);
   background-size: cover;
   // 背景画像の位置を決める
   background-position: 50% 50%;
   height: 420px;
+  position: relative;
 }
 
 .jumbotron .container .row{
-    margin-top: 100px;
-    color: #fff;
+  margin-top: 100px;
+  color: #fff;
 }
 
 .navbar-default {
-    background: transparent;
-    border-color: transparent;
-    z-index: 10;
+  background: transparent;
+  border-color: transparent;
+  z-index: 10;
 }
 
 .navbar-default .navbar-nav > li > a {
-    color: white;
-    font-size: 13px;
+  color: white;
+  font-size: 13px;
 }
 
 .navbar-default .navbar-brand {
-    color: white;
+  color: white;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
-    background-color: #fff;
+  background-color: #fff;
 }
 
 //navbar-deviseのcss
 .navbar-devise {
-    background: #fff;
-    border-color: #fff;
-    z-index: 10;
+  background: #fff;
+  border-color: #fff;
+  z-index: 10;
 }
 
 .navbar-devise .navbar-nav > li > a {
-    color: #222222;
-    font-size: 13px;
+  color: #222222;
+  font-size: 13px;
 }
 
 .navbar-devise .navbar-brand {
-    color: #222222;
+  color: #222222;
 }
 
 // トップページのnavbarのドロップダウンがクリックされた時
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-    background-color: transparent;
-    color: #555;
+  background-color: transparent;
+  color: #555;
 }
 
 //facebookボタン
 .btn-facebook {
-    color: #fff;
-    background-color: #4c66a4;
+  color: #fff;
+  background-color: #4c66a4;
 }
 
 // row-space類
@@ -104,13 +105,13 @@
 }
 
 .row-space-4 {
-    margin-bottom: 25px;
+  margin-bottom: 25px;
 }
 
 // プロフィール画像
 .profile-0 {
-    width: 28px !important;
-    height: 28px !important;
+  width: 28px !important;
+  height: 28px !important;
 }
 
 .profile-1 {
@@ -129,14 +130,14 @@
 }
 
 @media (min-width: 992px){
-.profile-full {
-        width: 100% !important;
-        height: 180px !important;
-    }
+  .profile-full {
+    width: 100% !important;
+    height: 180px !important;
+  }
 }
 
 .btn-full {
-    width: 100%;
+  width: 100%;
 }
 
 .vertification-checked:before{
@@ -174,30 +175,30 @@
 }
 
 .sidebar-nav .navbar-default .navbar-nav > li > a {
-    color: #222;
-    font-size: 16px;
+  color: #222;
+  font-size: 16px;
 }
 
 .sidebar-nav .navbar-default .navbar-nav > li{
-    border-right: 1px solid #ddd;
-    border-left: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
-    background-color: #fff
+  border-right: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background-color: #fff
 }
 
 .sidebar-nav .navbar-default .navbar-nav > li:first-child {
-    border-top: 1px solid #ddd;
+  border-top: 1px solid #ddd;
 }
 
 .sidebar-nav .navbar-toggle {
-    background-color: #337ab7;
+  background-color: #337ab7;
 }
 
 // dropzone.jsのcss
 @media (max-width: 768px){
   .dz-preview, .dz-processing, .dz-image-preview, .dz-error, .dz-complete {
-      margin: 10px 0!important;
-      width: 100%;
+    margin: 10px 0!important;
+    width: 100%;
   }
   .dropzone .dz-preview .dz-image {
     width: 100%;
@@ -232,7 +233,7 @@ a.sidebar-item {
 }
 
 li.panel-body {
-    border-top: 1px solid #eeeeee;
+  border-top: 1px solid #eeeeee;
 }
 
 li.panel-body:first-child {
@@ -319,37 +320,37 @@ span.listing-title {
 //showページのデスクトップcss
 @media (min-width: 992px){
   .panel-listing img {
-  height: 160px;
+    height: 160px;
   }
 }
 
 .price-card {
-    background: rgba(60,63,64,0.9);
-    color: #fff;
-    position: absolute;
-    bottom: 125px;
-    padding: 7px 10px;
+  background: rgba(60,63,64,0.9);
+  color: #fff;
+  position: absolute;
+  bottom: 125px;
+  padding: 7px 10px;
 }
 
 /*カレンダー用編集*/
 .class-holiday {
-    background: #337ab7 !important;
-    color: #fff !important;
+  background: #337ab7 !important;
+  color: #fff !important;
 }
 
 .class-holiday > .ui-state-default {
-    background: #337ab7 !important;
-    color: #fff !important;
+  background: #337ab7 !important;
+  color: #fff !important;
 }
 
 .calendar .ui-datepicker {
-    width: 100%;
+  width: 100%;
 }
 .calendar .ui-datepicker .ui-datepicker-current-day {
-    background-color: #fff;
+  background-color: #fff;
 }
 #datepicker .ui-datepicker .ui-datepicker-current-day a{
-    color: #222;
+  color: #222;
 }
 
 // listingチェックのcss
@@ -385,11 +386,139 @@ li#nav-publish a{
   font-weight: bold;
 }
 
+// Top-search-fieldのcss
+.top-search-field {
+  height: 90px;
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30px 0;
+  background: rgba(0,0,0,0.6);
+}
+
+@media (min-width: 992px){
+  .top-search-field .col-md-7,.col-md-2,.col-md-1{
+    padding: 0;
+  }
+}
+
+.top-search-field input{
+  border-radius: 0;
+}
+
+
+// トップページのportfolioのcss
+.portfolio-item a img{
+  width: 100%;
+  height: 200px;
+}
+
+.portfolio-caption{
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 15px
+}
+
+// フッターのCSS
+footer {
+  padding: 120px 0;
+  text-align: center;
+  background: #2b2d2e;
+  height:250px;
+}
+footer {
+  display: block;
+}
+
+footer span.copyright {
+  line-height: 40px;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  text-transform: none;
+  color: #fff
+}
+
+ul.social-buttons {
+  margin-bottom: 0;
+}
+
+ul.social-buttons li a:hover, ul.social-buttons li a:focus, ul.social-buttons li a:active {
+  background-color: #d9534f;
+}
+
+.list-inline {
+  padding-left: 0;
+  margin-left: -5px;
+  list-style: none;
+}
+
+.list-inline>li {
+  display: inline-block;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+li.text-white a{
+  color: #fff
+}
+
+ul.social-buttons li a {
+  display: block;
+  background-color: #222222;
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  font-size: 20px;
+  line-height: 40px;
+  color: white;
+  outline: none;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+footer ul.quicklinks {
+  margin-bottom: 0;
+  line-height: 40px;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  text-transform: none;
+}
+
+//topページコンテントのcss
+.portfolio-item a img{
+  width: 100%;
+  height: 200px;
+}
+
+.portfolio-caption{
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 15px
+}
+
+section h2.section-heading {
+  font-size: 40px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+section h3.section-subheading {
+  font-size: 16px;
+  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: none;
+  font-style: italic;
+  font-weight: 400;
+}
+
 a {
   color: #222;
 }
 
 body {
-    color: #222;
-    background-color: #F8F8F8;
+  color: #222;
+  background-color: #F8F8F8;
 }
