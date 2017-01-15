@@ -352,6 +352,39 @@ span.listing-title {
     color: #222;
 }
 
+// listingチェックのcss
+li.listing-checked:before{
+  content: "\f00c";
+  font-family: FontAwesome;
+  position: absolute;
+  z-index: 100;
+  top:15%;
+  right: 5px;
+  font-size: 1.55em;
+  text-align: center;
+  width: 1.25em;
+  color: #00d1c1;
+}
+
+// vertical-navbar notcheckedmark
+li.listing-notchecked:before{
+  content: "\f067";
+  font-family: FontAwesome;
+  position: absolute;
+  z-index: 100;
+  top: 15%;
+  right: 5px;
+  font-size: 1.55em;
+  text-align: center;
+  width: 1.25em;
+  color: #555;
+}
+
+li#nav-publish a{
+  color: #d9534f;
+  font-weight: bold;
+}
+
 a {
   color: #222;
 }
