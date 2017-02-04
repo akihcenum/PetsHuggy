@@ -48,5 +48,6 @@ Rails.application.routes.draw do
 
   get '/search' => 'pages#search'
 
-end
+  get '/ajaxsearch' => 'pages#ajaxsearch'
 
+end
